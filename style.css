@@ -1,4 +1,8 @@
 
+* {
+	box-sizing: border-box;
+}
+
 @font-face {
   font-family: 'arcad';
   src: url(https://res.cloudinary.com/dvwvkt7iq/raw/upload/v1585505751/RdjHandPixel-5w3L_qktbye.otf)
@@ -31,11 +35,12 @@ h1 {
   z-index: 100;
 }
 
-#picSize {
+#picSize img {
   position: absolute;
-  top: 10%;
-  left: 40%;
-  width: 10px;
+  top: 20%;
+  left: 30%;
+  /* width: 40vw; */
+  z-index: 600;
 }
 
 nav {
@@ -105,4 +110,123 @@ h5{
 #home-artwork{
   width: 20em;
   height:20em;
+}
+
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 767px)  {
+ 
+  @font-face {
+    font-family: 'arcad';
+    src: url(https://res.cloudinary.com/dvwvkt7iq/raw/upload/v1585505751/RdjHandPixel-5w3L_qktbye.otf)
+  }
+  
+  @font-face{
+    font-family: 'menulist';
+    src: url(https://res.cloudinary.com/dvwvkt7iq/raw/upload/v1585506299/Connection-arMJ_uugiku.otf)
+  }
+  
+  body {
+    background-color: #FFA900;
+  }
+  
+  canvas {
+    display:none;
+    /* position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 1; */
+  }
+  
+  h1 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    font-family: 'arcad', sans-serif;
+    font-weight: bold;
+    font-size: 16rem;
+    color: #501DFF;
+    z-index: 100;
+  }
+  
+  #picSize img {
+    position: absolute;
+    top: 35%;
+    left: 0%;
+    width: 160vw;
+    height: 80vh;
+    z-index: 600;
+  }
+  
+  nav {
+    position: absolute;
+    top: 120vh;
+    right: -25vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    
+    z-index: 200;
+  }
+  
+  ul{
+    display: flex;
+    flex-direction: row;
+    flex-flow: <‘flex-direction’>;
+    justify-content: space-between;
+  }
+  
+  li {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between; 
+    /* border: 3px solid black;  */
+    /* margin: 10px; */
+    padding: 220px, 20px, 20px, 020px;
+    font-family: 'menulist', sans-serif;
+    font-size: 6rem;
+    border-bottom: 1px #501DFF solid ;
+    letter-spacing: .5vw;
+    color: #501DFF;
+    padding: 10px;
+  
+    
+  }
+  
+  a {
+    text-decoration: none;
+    color: #501DFF;
+  }
+  
+  a:hover {
+    color: #501DFF;
+  }
+  
+  li:hover {
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-position: above;
+  }
+  
+  footer {
+    position: absolute;
+    left: 40vw;
+    bottom: -50%;
+    width: 100%;
+    height: -1em;
+    font-family: 'menulist', sans-serif;
+    z-index: 40;
+  }
+  
+  h5{
+    font-size: 3.5em;
+    color: white;
+  }
+  
+  #home-artwork{
+    width: 20em;
+    height:20em;
+  }
+
 }
