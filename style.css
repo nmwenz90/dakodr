@@ -143,29 +143,29 @@ and (max-device-width: 767px)  {
     top: 20%;
     left: 20%;
     font-family: 'arcad', sans-serif;
-    font-weight: bold;
-    font-size: 16rem;
+    font-weight: bolder;
+    font-size: 3.5rem;
     color: #501DFF;
     z-index: 100;
   }
   
   #picSize img {
     position: absolute;
-    top: 35%;
-    left: 0%;
-    width: 160vw;
-    height: 80vh;
+    top: 30%;
+    left: 5%;
+    width: 90vw;
+    height: 40vh;
     z-index: 600;
   }
   
   nav {
-    position: absolute;
-    top: 120vh;
-    right: -25vw;
     display: flex;
+    position: absolute;
+    top: 70%;
+    right: 15%;
     flex-direction: row;
     justify-content: space-around;
-    align-items: baseline;
+    /* align-items: baseline; */
     
     z-index: 200;
   }
@@ -173,7 +173,6 @@ and (max-device-width: 767px)  {
   ul{
     display: flex;
     flex-direction: row;
-    flex-flow: <‘flex-direction’>;
     justify-content: space-between;
   }
   
@@ -185,7 +184,7 @@ and (max-device-width: 767px)  {
     /* margin: 10px; */
     padding: 220px, 20px, 20px, 020px;
     font-family: 'menulist', sans-serif;
-    font-size: 6rem;
+    font-size: 1rem;
     border-bottom: 1px #501DFF solid ;
     letter-spacing: .5vw;
     color: #501DFF;
@@ -211,8 +210,8 @@ and (max-device-width: 767px)  {
   
   footer {
     position: absolute;
-    left: 40vw;
-    bottom: -50%;
+    left: 0;
+    bottom: 0;
     width: 100%;
     height: -1em;
     font-family: 'menulist', sans-serif;
@@ -220,7 +219,7 @@ and (max-device-width: 767px)  {
   }
   
   h5{
-    font-size: 3.5em;
+    font-size: 1em;
     color: white;
   }
   
