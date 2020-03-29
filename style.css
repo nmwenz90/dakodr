@@ -112,7 +112,7 @@ h5{
   height:20em;
 }
 
-@media only screen 
+@media screen 
 and (min-device-width: 320px) 
 and (max-device-width: 767px)  {
  
