@@ -26,5 +26,3 @@ function setup() {
       endShape(CLOSE)
     
   }
-
-  document.getElementById('stream').addEventListener.click(() => console.log('clicked') )
