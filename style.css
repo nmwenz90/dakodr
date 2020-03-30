@@ -162,7 +162,7 @@ and (max-device-width: 767px)  {
   h1 {
     position: absolute;
     top: 20%;
-    left: 10%;
+    left: 15%;
     font-family: 'arcad', sans-serif;
     font-weight: bolder;
     font-size: 3.5rem;
@@ -173,7 +173,7 @@ and (max-device-width: 767px)  {
   #picSize img {
     position: absolute;
     top: 29%;
-    left: -5%;
+    left: 5%;
     width: 90vw;
     height: 40vh;
     z-index: 600;
@@ -183,7 +183,7 @@ and (max-device-width: 767px)  {
     display: flex;
     position: absolute;
     top: 66vh;
-    left: -5vw;
+    left: 10vw;
     flex-direction: row;
     justify-content: space-around;
     /* align-items: baseline; */
@@ -240,6 +240,8 @@ and (max-device-width: 767px)  {
   }
   
   h5{
+    
+    margin-left: 4vw;
     font-size: .5rem;
     color: white;
   }
@@ -251,8 +253,8 @@ and (max-device-width: 767px)  {
 
   #playPausePosition {
     position: absolute;
-    left: 40vw;
-    top:10vh;
+    left: 33vw;
+    top:15vh;
     /* color: #501DFF; */
   }
   
