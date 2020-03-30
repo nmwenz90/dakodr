@@ -1,3 +1,10 @@
+//P5
+let playPauseButton = document.querySelector("#playPauseButton")
+let musicPlayer = new Tone.Player("https://res.cloudinary.com/dvwvkt7iq/video/upload/so_17/v1585590736/thegroov2_cqsvhi.mp3").toMaster();
+musicPlayer.autostart = true;
+musicPlayer.volume.value = -3;
+
+
 function setup() {
     createCanvas(1050, 700);
   }
@@ -26,3 +33,26 @@ function setup() {
       endShape(CLOSE)
     
   }
+
+  //BUTTON
+  playPauseButton.style.color = '#501DFF'
+
+  //Toggle between play and pause, clicking changes the symbol of the inner html of the play pause button
+  playPauseButton.addEventListener('click', () => {
+    
+    if (musicPlayer.state === 'started'){
+      musicPlayer.stop()
+      playPauseButton.innerHTML = '►'
+      playPauseButton.style.color = '#501DFF'
+      
+    }
+    else if (musicPlayer.state === 'stopped'){
+      playPauseButton.style.color = '#501DFF'
+      playPauseButton.innerHTML = '◼'
+      
+      musicPlayer.start();
+    } 
+  })
+
+  //if the song isnt playing the button text should be arrow
+  //else the button text should be two ||
