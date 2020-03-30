@@ -112,6 +112,27 @@ h5{
   height:20em;
 }
 
+#playPausePosition {
+  position: absolute;
+  right: 8vw;
+  top: 50vh;
+  /* color: #501DFF; */
+}
+
+#playPauseButton {
+  background: transparent;
+  /* color: #501DFF; */
+  border: .1em #501DFF solid;
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+button:hover {
+  color: red;
+  border-color: red;
+  font-size: 2rem;
+}
+
 @media screen 
 and (min-device-width: 320px) 
 and (max-device-width: 767px)  {
@@ -141,7 +162,7 @@ and (max-device-width: 767px)  {
   h1 {
     position: absolute;
     top: 20%;
-    left: 20%;
+    left: 10%;
     font-family: 'arcad', sans-serif;
     font-weight: bolder;
     font-size: 3.5rem;
@@ -151,8 +172,8 @@ and (max-device-width: 767px)  {
   
   #picSize img {
     position: absolute;
-    top: 30%;
-    left: 5%;
+    top: 29%;
+    left: -5%;
     width: 90vw;
     height: 40vh;
     z-index: 600;
@@ -161,8 +182,8 @@ and (max-device-width: 767px)  {
   nav {
     display: flex;
     position: absolute;
-    top: 70%;
-    right: 15%;
+    top: 66vh;
+    left: -5vw;
     flex-direction: row;
     justify-content: space-around;
     /* align-items: baseline; */
@@ -184,7 +205,7 @@ and (max-device-width: 767px)  {
     /* margin: 10px; */
     padding: 220px, 20px, 20px, 020px;
     font-family: 'menulist', sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     border-bottom: 1px #501DFF solid ;
     letter-spacing: .5vw;
     color: #501DFF;
@@ -219,13 +240,28 @@ and (max-device-width: 767px)  {
   }
   
   h5{
-    font-size: 1em;
+    font-size: .5rem;
     color: white;
   }
   
   #home-artwork{
     width: 20em;
     height:20em;
+  }
+
+  #playPausePosition {
+    position: absolute;
+    left: 40vw;
+    top:10vh;
+    /* color: #501DFF; */
+  }
+  
+  #playPauseButton {
+    background: transparent;
+    /* color: #501DFF; */
+    border: .01em #501DFF solid;
+    padding: 10px 20px;
+    font-size: 1rem;
   }
 
 }
