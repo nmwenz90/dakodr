@@ -1,19 +1,22 @@
 //P5
 let playPauseButton = document.querySelector("#playPauseButton")
 let musicPlayer = new Tone.Player("https://res.cloudinary.com/dvwvkt7iq/video/upload/so_17/v1585590736/thegroov2_cqsvhi.mp3").toMaster();
-musicPlayer.autostart = true;
 musicPlayer.volume.value = -3;
 
 
+musicPlayer.autostart = true;
+if(screen.width <= 480) musicPlayer.autostart = false;
+
+
 function setup() {
-    createCanvas(1050, 700);
+    createCanvas(1500, 780);
   }
 
   function draw() {
     background('#FFA900');
     stroke('rgba(112,255,350,0.8)');
     fill('rgba(255,224,164,0.4)');
-    translate(width/2, height/2)
+    translate(width/2-200, height/2)
     
     let circleResolution = map(mouseY, 0, height, 2, 80);
     let radius = mouseX-width/2 + 0.5;
