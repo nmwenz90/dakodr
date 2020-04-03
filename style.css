@@ -78,13 +78,31 @@ li {
   
 }
 
+.disableButton{
+    /* display: none; */
+    text-decoration: none;
+    color: gray;
+    cursor: default;
+    text-decoration: line-through;
+
+
+}
+
+.disableButton:hover{
+  /* display: none; */
+  /* text-decoration: none; */
+  color: gray;
+  cursor: default;
+  text-decoration: line-through;
+}
+
 a {
   text-decoration: none;
   color: #501DFF;
 }
 
 a:hover {
-  color: #501DFF;
+  color: rgb(57, 32, 138);
 }
 
 li:hover {
@@ -100,7 +118,7 @@ footer {
   width: 100%;
   height: -1em;
   font-family: 'menulist', sans-serif;
-  z-index: 40
+  z-index: 40;
 }
 
 h5{
@@ -117,21 +135,24 @@ h5{
   position: absolute;
   right: 8vw;
   top: 50vh;
-  /* color: #501DFF; */
+  color: #501DFF;
 }
 
 #playPauseButton {
   background: transparent;
-  /* color: #501DFF; */
+  color: #501DFF;
   border: .1em #501DFF solid;
   padding: 10px 20px;
   font-size: 1rem;
 }
+button {
+  color: #501DFF;
+}
 
-button:hover {
-  color: red;
-  border-color: red;
-  font-size: 2rem;
+#playPauseButton:hover {
+  color: rgb(57, 32, 138);
+  border-color: rgb(57, 32, 138);
+  font-size: 1rem;
 }
 
 @media screen 
