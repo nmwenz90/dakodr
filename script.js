@@ -1,61 +1,73 @@
 //P5
-let playPauseButton = document.querySelector("#playPauseButton")
-let musicPlayer = new Tone.Player("https://res.cloudinary.com/dvwvkt7iq/video/upload/so_17/v1585590736/thegroov2_cqsvhi.mp3").toMaster();
-musicPlayer.volume.value = -3;
+let reverb, freqValue, w;
+let pic;
+// let context = new Tone.Context();
 
+let playPauseButton = document.querySelector('#playPauseButton');
+// let verb = new Tone.Reverb(1.5);
+// let filter;
+let freqAnalyser;
+let musicPlayer;
+function preload() {
+	pic = loadImage('https://res.cloudinary.com/dvwvkt7iq/image/upload/v1587261034/Drawing_y4rtlx.png');
+	// filter = new Tone.Filter(800, 'lowpass')
+	freqAnalyser = new Tone.Analyser('fft').toMaster();
+	musicPlayer = new Tone.Player(
+		'https://res.cloudinary.com/dvwvkt7iq/video/upload/v1587255500/hypebeat_znjnhe.mp3'
+	).connect(freqAnalyser);
+	musicPlayer.autostart = true;
+}
 
-musicPlayer.autostart = true;
-if(screen.width <= 480) musicPlayer.autostart = false;
+// musicPlayer.volume.value = -3;
 
+// w = w / 64;
+// if (screen.width <= 480) musicPlayer.autostart = false;
 
 function setup() {
-    createCanvas(1500, 780);
-  }
+	createCanvas(windowWidth, windowHeight);
+	image(pic, 0, 0, 1580, 800);
+}
 
-  function draw() {
-    background('#FFA900');
-    stroke('rgba(112,255,350,0.8)');
-    fill('rgba(255,224,164,0.4)');
-    translate(width/2-200, height/2)
-    
-    let circleResolution = map(mouseY, 0, height, 2, 80);
-    let radius = mouseX-width/2 + 0.5;
-    let angle = TWO_PI / circleResolution;
-    
-    strokeWeight(mouseY/20);
-    
-    beginShape();
-      for (let i = 0; i <= circleResolution; i++){
-        let x = cos(angle * i) * radius;
-        let y = sin(angle * i) * radius;
-        line(0,0,x,y);
-        vertex(x,y)
-        vertex(x+random(20,50), y+random(20,50))
-    }
-    
-      endShape(CLOSE)
-    
-  }
+function draw() {
+	// background('#FFA900');
+	let x1 = floor(random(width));
+	let y1 = 0;
 
-  //BUTTON
-  playPauseButton.style.color = '#501DFF'
+	let x2 = round(x1 + random(-7, 7));
+	let y2 = round(random(-5, 5));
 
-  //Toggle between play and pause, clicking changes the symbol of the inner html of the play pause button
-  playPauseButton.addEventListener('click', () => {
-    
-    if (musicPlayer.state === 'started'){
-      musicPlayer.stop()
-      playPauseButton.innerHTML = '►'
-      playPauseButton.style.color = '#501DFF'
-      
-    }
-    else if (musicPlayer.state === 'stopped'){
-      playPauseButton.style.color = '#501DFF'
-      playPauseButton.innerHTML = '◼'
-      
-      musicPlayer.start();
-    } 
-  })
+	let wid = floor(random(10, 80));
+	let h = height;
 
-  //if the song isnt playing the button text should be arrow
-  //else the button text should be two ||
+	set(x2, y2, get(x1, y1, wid, h));
+	// translate(width / 2 - 200, height / 2);
+	// let circleResolution = map(mouseY, 0, height, 2, 80);
+	// let radius = mouseX - width / 2 + 0.5;
+	freqValue = freqAnalyser.getValue();
+	console.log(freqValue);
+	// let angle = TWO_PI / circleResolution;
+	//connect height with lower frequencies
+	// strokeWeight(mouseY / 20);
+}
+
+//BUTTON
+// playPauseButton.style.color = '#501DFF';
+
+//Toggle between play and pause, clicking changes the symbol of the inner html of the play pause button
+playPauseButton.addEventListener('click', () => {
+	if (musicPlayer.state === 'started') {
+		musicPlayer.stop();
+		playPauseButton.innerHTML = '►';
+		buttoncol();
+	} else if (musicPlayer.state === 'stopped') {
+		playPauseButton.innerHTML = '&#9724';
+		buttoncol();
+		musicPlayer.start();
+	}
+});
+
+function buttoncol() {
+	playPauseButton.style.color = '#B07DFF';
+}
+//if the song isnt playing the button text should be arrow
+//else the button text should be two ||
