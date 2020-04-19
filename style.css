@@ -103,7 +103,7 @@ a {
 }
 
 a:hover {
-	color: rgb(57, 32, 138);
+	color: #b07dff;
 }
 
 li:hover {
@@ -143,7 +143,7 @@ h5 {
 	background: #0b0a96;
 	color: #b07dff;
 	border: .2em #b07dff solid;
-	padding: 10px 20px;
+	padding: 10px 25px;
 	font-size: 2rem;
 	font-family: 'menulist', sans-serif;
 }
@@ -154,7 +154,7 @@ button {
 #playPauseButton:hover {
 	background: #0b0a96;
 	color: #b07dff;
-	border: .1em #b07dff solid;
+	border: .2em #b07dff solid;
 	font-size: 2rem;
 }
 
